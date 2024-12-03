@@ -6,7 +6,7 @@ import icon4 from '../../assets/images/icons/4.png'
 
 const CardTop = () => {
     return (
-        <div className='grid md:grid-cols-4 gap-10 bg-[#ECEAE4] p-4 rounded-b-2xl'>
+        <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10 bg-[#ECEAE4] p-4 rounded-b-2xl'>
             <div className='text-xl w-[270px]'> 
                 <img src={icon1} alt="" />
                 <h1 className='text-2xl font-semibold'>Awesome Aroma</h1>
