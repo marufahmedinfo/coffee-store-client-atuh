@@ -5,6 +5,7 @@ import { GoArrowLeft } from 'react-icons/go';
 import { Link } from 'react-router-dom';
 import bgImg from '../../assets/images/more/1.png'
 import { AuthContext } from '../../provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 
 const SignIn = () => {
@@ -36,7 +37,16 @@ const SignIn = () => {
                     .then(res => res.json())
                     .then(data => {
                         console.log('SignIn info Update Data in DB :', data)
-                    })
+                        if (data.modifiedCount) {
+                            Swal.fire({
+                                title: 'Success',
+                                text: 'User Register Successfully',
+                                icon: 'success',
+                                confirmButtonText: 'Ok'
+                            })
+                            from.reset();
+                        }
+                        })
             })
             .catch(error => {
                 console.log(error.message)
