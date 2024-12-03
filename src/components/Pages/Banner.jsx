@@ -1,5 +1,6 @@
 import React from 'react';
 import bannerIm from '../../assets/images/more/3.png'
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -22,12 +23,12 @@ const Banner = () => {
                     moments and make them memorable.
                 </p>
                 {/* Button */}
-                <a
-                    href="#"
+                <Link
+                    to={'/users'}
                     className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-6 rounded-lg shadow-md transition"
                 >
-                    Learn More
-                </a>
+                    AllUsers
+                </Link>
             </div>
         </section>
     );

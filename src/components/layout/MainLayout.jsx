@@ -6,7 +6,7 @@ import Footer from '../Pages/Footer';
 
 const MainLayout = () => {
     return (
-        <div className='md:max-w-7xl pb-12 container mx-auto'>
+        <div>
             <Navbar></Navbar>
             <div className='min-h-[calc(100vh-300px)]'>
                 <Outlet></Outlet>

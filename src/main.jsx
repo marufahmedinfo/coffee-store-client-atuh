@@ -1,7 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -12,6 +11,10 @@ import Error from './components/Pages/Error.jsx';
 import AddCoffe from './components/Pages/AddCoffe.jsx';
 import UpdateCoffee from './components/Pages/UpdateCoffee.jsx';
 import Vew from './components/Pages/Vew.jsx';
+import SignUp from './components/layout/SignUp.jsx';
+import SignIn from './components/layout/SignIn.jsx';
+import AuthProvider from './provider/AuthProvider.jsx';
+import AllUsers from './components/Pages/AllUsers.jsx';
 
 const router = createBrowserRouter([
   {
@@ -31,12 +34,25 @@ const router = createBrowserRouter([
       {
         path: '/updateCoffee/:id',
         element: <UpdateCoffee />,
-        loader: ({params}) => fetch(`http://localhost:5000/coffee/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/coffee/${params.id}`)
       },
       {
         path: '/vewCoffee/:id',
         element: <Vew />,
-        loader: ({params}) => fetch(`http://localhost:5000/coffee/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/coffee/${params.id}`)
+      },
+      {
+        path: '/signUp',
+        element: <SignUp />
+      },
+      {
+        path: '/signIn',
+        element: <SignIn />
+      },
+      {
+        path: '/users',
+        element: <AllUsers />,
+        loader: () => fetch('http://localhost:5000/users')
       }
     ]
   },
@@ -44,6 +60,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>,
 )

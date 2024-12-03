@@ -32,30 +32,29 @@ const Footer = () => {
                     </p>
                     {/* Social Media Links */}
                     <div className="flex space-x-4">
-                        <a href="#" className="text-gray-600 hover:text-gray-800 text-2xl">
+                        <a href="https://www.facebook.com/maruf.ahmed.163821" className="text-gray-600 hover:text-gray-800 text-2xl">
                             <FaFacebookF /> {/* Replace with icons */}
                         </a>
-                        <a href="#" className="text-gray-600 hover:text-gray-800 text-2xl">
+                        <a href="https://x.com/MarufAhmmedinfo" className="text-gray-600 hover:text-gray-800 text-2xl">
                             <IoLogoTwitter />
                         </a>
-                        <a href="#" className="text-gray-600 hover:text-gray-800 text-2xl">
+                        <a href="https://www.instagram.com/marufahmedinfos/" className="text-gray-600 hover:text-gray-800 text-2xl">
                             <FaInstagram />
                         </a>
-                        <a href="#" className="text-gray-600 hover:text-gray-800 text-2xl">
+                        <a href="https://www.linkedin.com/in/marufahmedinfos/" className="text-gray-600 hover:text-gray-800 text-2xl">
                             <FaLinkedin />
                         </a>
                     </div>
                     {/* Contact Information */}
                     <div className="mt-6">
                         <p className="mb-2 items-center flex gap-3 text-xl">
-                            <MdOutlinePhone /> +88 01533 333 333
+                            <MdOutlinePhone /> +88 01320316967
                         </p>
                         <p className="mb-2 items-center flex gap-3 text-xl">
-                            <IoMailOpen /> info@gmail.com
+                            <IoMailOpen /> maruffose@gmail.com
                         </p>
                         <p className=' items-center flex gap-3 text-xl'>
-                            <FaLocationDot /> 72 Wall Street,
-                            King Road, Dhaka
+                            <FaLocationDot /> Birdal,Kanaighat,sylhet
                         </p>
                     </div>
                 </div>
